@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & AIO (AI Optimization) Meta Tags -->
+    <meta name="description" content="JAM Experiential is a boutique production agency based in New Jersey, serving the Philadelphia area and nationwide. We plan, staff, and produce remarkable brand activations, pop-ups, and experiential events.">
+    <meta name="keywords" content="experiential agency, brand activations, event production, guerrilla marketing, pop-up experiences, event staffing, New Jersey, Philadelphia, nationwide">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="JAM Experiential LLC | Boutique Experiential Production Agency">
+    <meta property="og:description" content="We orchestrate, staff, and supply all necessary assets for your activations—from soup to nuts. Based in NJ, serving Philadelphia and nationwide.">
+    <meta property="og:type" content="website">
+
+    <title>JAM Experiential LLC | Boutique Experiential Production Agency</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        retro: ['"Fraunces"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            pink: '#FF8FAB', /* Lighter, softer pink */
+                            stripePink: '#FFC2D1', /* Lighter stripe pink */
+                            black: '#2B2B2B', /* Slightly softer black to match the lighter vibe */
+                            gray: '#7A7C84',
+                            cream: '#FAF9F6',
+                            logoCream: '#ECEAE6',
+                            card: '#FFFFFF',
+                            accent: '#FDF8F9'
+                        }
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        'marquee': {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FAF9F6; color: #2B2B2B; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF9F6; }
+        ::-webkit-scrollbar-thumb { background: #FF8FAB; border-radius: 3px; }
+
+        @media (min-width: 768px) {
+            body, a, button, .cursor-pointer { cursor: none !important; }
+        }
+        #custom-cursor {
+            position: fixed;
+            top: 0; left: 0;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background-color: rgba(255, 143, 171, 0.8);
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border 0.2s ease-out;
+            backdrop-filter: blur(2px);
+            display: none;
+        }
+        @media (min-width: 768px) {
+            #custom-cursor { display: block; }
+        }
+        #custom-cursor.hovered {
+            width: 60px; height: 60px;
+            background-color: rgba(255, 143, 171, 0.15);
+            border: 1px solid rgba(255, 143, 171, 0.8);
+        }
+
+        .reveal-glass {
+            opacity: 0;
+            filter: blur(10px);
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .reveal-glass.is-visible {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD for SEO & AI Context -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "JAM Experiential LLC",
+      "description": "A boutique experiential production agency specializing in brand activations, guerrilla marketing, and curated staffing.",
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "New Jersey"
+        },
+        {
+          "@type": "City",
+          "name": "Philadelphia"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "knowsAbout": [
+        "Brand Activations", 
+        "Guerrilla Marketing", 
+        "Event Staffing", 
+        "Experiential Marketing", 
+        "Event Logistics", 
+        "Pop-Up Experiences"
+      ],
+      "url": "https://www.jamexperiential.com"
+    }
+    </script>
+</head>
+<body class="font-sans antialiased selection:bg-brand-pink selection:text-white overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Sticky Nav -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm bg-white/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="text-brand-black font-extrabold text-xl md:text-2xl tracking-tighter hover:text-brand-pink transition-colors">
+                JAM Experiential LLC
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide text-brand-black">
+                <a href="#philosophy" class="hover:text-brand-pink transition-colors duration-200">How We Work</a>
+                <a href="#capabilities" class="hover:text-brand-pink transition-colors duration-200">Services</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full border border-brand-black bg-brand-black text-white hover:bg-brand-pink hover:border-transparent transition-all duration-300">
+                    Pitch Your Vision
+                </a>
+            </nav>
+            <button id="mobile-menu-btn" aria-label="Toggle mobile menu" class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none z-50">
+                <span id="bar-1" class="w-full h-0.5 bg-brand-black transition-all duration-300"></span>
+                <span id="bar-2" class="w-full h-0.5 bg-brand-black transition-all duration-300"></span>
+                <span id="bar-3" class="w-full h-0.5 bg-brand-black transition-all duration-300"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex flex-col justify-center pt-24 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto w-full relative z-10 text-center flex flex-col items-center justify-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-brand-black leading-[1.35] sm:leading-[1.4] mb-8 max-w-4xl">
+                We 
+                <span class="inline-block bg-gradient-to-r from-pink-400/80 via-brand-pink/80 to-rose-400/80 text-white px-4 py-1.5 sm:px-6 sm:py-2.5 rounded-2xl shadow-md shadow-brand-pink/20 transform rotate-[2.5deg] hover:rotate-0 hover:scale-105 transition-all duration-300 select-none align-middle mx-1 my-1.5 origin-center cursor-pointer">plan</span>, 
+                <span class="inline-block bg-gradient-to-r from-brand-pink/80 via-rose-400/80 to-pink-400/80 text-white px-4 py-1.5 sm:px-6 sm:py-2.5 rounded-2xl shadow-md shadow-brand-pink/20 transform -rotate-[3deg] hover:rotate-0 hover:scale-105 transition-all duration-300 select-none align-middle mx-1 my-1.5 origin-center cursor-pointer">staff</span>, 
+                and 
+                <span class="inline-block bg-gradient-to-r from-rose-400/80 via-pink-400/80 to-brand-pink/80 text-white px-4 py-1.5 sm:px-6 sm:py-2.5 rounded-2xl shadow-md shadow-brand-pink/20 transform rotate-[1.5deg] hover:rotate-0 hover:scale-105 transition-all duration-300 select-none align-middle mx-1 my-1.5 origin-center cursor-pointer">produce</span> 
+                remarkable activations.
+            </h1>
+            <p class="text-lg md:text-xl text-brand-gray font-light max-w-2xl leading-relaxed mb-8 mx-auto">
+                JAM Experiential is a boutique production agency. We orchestrate, staff, and supply all necessary assets for your activations—from soup to nuts. Unbiased, flexible, and operationally focused.
+            </p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 w-full max-w-md">
+                <a href="#contact" class="px-8 py-4 rounded-full bg-brand-pink/80 text-white text-center font-bold shadow-lg shadow-brand-pink/30 hover:bg-brand-black hover:shadow-none transition-all duration-300">Pitch Your Vision</a>
+                <a href="#philosophy" class="px-8 py-4 rounded-full border border-brand-black/20 text-brand-black hover:border-brand-black hover:bg-brand-black/5 text-center font-bold transition-all duration-200">How We Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Marquee Section -->
+    <div class="relative flex overflow-x-hidden bg-brand-pink/10 text-brand-pink font-serif py-5 border-y border-brand-pink/20 w-full select-none">
+        <div class="animate-marquee whitespace-nowrap flex items-center">
+            <!-- Group 1 -->
+            <span class="mx-8 text-2xl tracking-wide italic">Brand Activations</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Guerrilla Marketing</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Curated Staffing</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Complex Logistics</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Pop-Up Experiences</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <!-- Group 2 (Duplicate for seamless infinite loop) -->
+            <span class="mx-8 text-2xl tracking-wide italic">Brand Activations</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Guerrilla Marketing</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Curated Staffing</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Complex Logistics</span> <span class="mx-8 text-brand-pink/40">✦</span>
+            <span class="mx-8 text-2xl tracking-wide italic">Pop-Up Experiences</span> <span class="mx-8 text-brand-pink/40">✦</span>
+        </div>
+    </div>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-24 bg-brand-accent/30 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-pink font-bold text-sm uppercase tracking-widest block">How We Work</span>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-black leading-tight">Your vision, engineered and orchestrated flawlessly.</h2>
+                    <p class="text-brand-gray leading-relaxed text-base font-light">We manage every moving layer of your activation. From curating bespoke activation elements and managing timelines to optimizing on-site team performance and driving measurable results, we are your single point of execution.</p>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-brand-black/5">
+                        <h3 class="text-lg font-bold mb-2">Asset Sourcing</h3>
+                        <p class="text-xs text-brand-gray font-light">Custom 10x10 tents, branded valances and backwalls, and bespoke swag—all tailored to your creative specs.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-brand-black/5">
+                        <h3 class="text-lg font-bold mb-2">Complex Logistics</h3>
+                        <p class="text-xs text-brand-gray font-light">Efficient routing, precise scheduling, and seamless load-in management. We manage the operational details so you can focus on your campaign goals.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-brand-black/5">
+                        <h3 class="text-lg font-bold mb-2">Staffing &amp; Contractors</h3>
+                        <p class="text-xs text-brand-gray font-light">We handpick our staff, training and preparing them to deliver your brand messaging effectively.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-brand-black/5">
+                        <h3 class="text-lg font-bold mb-2">Integrated Lead Gen</h3>
+                        <p class="text-xs text-brand-gray font-light">QR code systems, rapid custom-built landing pages, and dynamic instant email follow-ups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="capabilities" class="py-24 bg-[#FAF9F6] relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-brand-pink font-bold text-sm uppercase tracking-widest block mb-2">Services</span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-black">
+                    <span class="inline-block bg-gradient-to-r from-pink-400/80 via-brand-pink/80 to-rose-400/80 text-white px-4 py-1.5 sm:px-5 sm:py-2 rounded-2xl shadow-md shadow-brand-pink/20 transform rotate-[1.5deg] hover:rotate-0 hover:scale-105 transition-all duration-300 align-middle mx-1 cursor-pointer">Experiential</span> 
+                    & 
+                    <span class="inline-block bg-gradient-to-r from-brand-pink/80 via-rose-400/80 to-pink-400/80 text-white px-4 py-1.5 sm:px-5 sm:py-2 rounded-2xl shadow-md shadow-brand-pink/20 transform -rotate-[2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 align-middle mx-1 cursor-pointer">Digital</span> 
+                    Services.
+                </h2>
+            </div>
+            
+            <!-- Experiential Category -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-brand-black mb-8 flex items-center">
+                    <span class="w-1.5 h-8 bg-brand-pink mr-3 rounded-full"></span>
+                    Experiential
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Activation Execution</h3>
+                        <p class="text-sm text-brand-gray font-light">From product sampling tours to festival booths, we handle everything from setup to breakdown. We maintain efficient line management and consumer flow, ensuring on-site execution is seamless.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-masks-theater"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Guerrilla &amp; Pop-Up</h3>
+                        <p class="text-sm text-brand-gray font-light">We take your brand directly to the consumer. From mobile pop-ups to targeted street-level interactions, we create meaningful, unscripted brand moments.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-people-carry-box"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Curated Brand Staffing</h3>
+                        <p class="text-sm text-brand-gray font-light">We handpick our staff, working only with those we trust. We leverage our extensive network to match the right talent to every task, ensuring our team is trained to deliver your brand message effectively.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-camera-retro"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Content &amp; Recap</h3>
+                        <p class="text-sm text-brand-gray font-light">We turn your activation into a viral moment. We coordinate specialized content crews to capture high-energy Instagram Reels and video assets that keep your brand story trending long after the event ends.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Category -->
+            <div>
+                <h3 class="text-2xl font-bold text-brand-black mb-8 flex items-center">
+                    <span class="w-1.5 h-8 bg-brand-pink mr-3 rounded-full"></span>
+                    Digital
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-qrcode"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Data &amp; Lead Capture</h3>
+                        <p class="text-sm text-brand-gray font-light">We bridge the physical and digital. By building dedicated QR flows and landing pages, we ensure every consumer interaction is captured for your database.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Influencer &amp; UGC</h3>
+                        <p class="text-sm text-brand-gray font-light">We turn your activation into a content engine. We deploy incentives and guide on-the-ground creators to ensure your brand story scales organically.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-hashtag"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Social Media Management</h3>
+                        <p class="text-sm text-brand-gray font-light">We manage your social presence, ensuring your brand story resonates with your community through consistent, high-engagement content.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-brand-black/5 hover:-translate-y-1 hover:border-brand-pink/30 hover:shadow-lg hover:shadow-brand-pink/10 transition-all duration-300">
+                        <div class="text-brand-pink text-3xl mb-4"><i class="fa-solid fa-envelope"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Email Campaign Management</h3>
+                        <p class="text-sm text-brand-gray font-light">We build and manage targeted email campaigns that turn event leads into loyal customers, driving retention and measurable brand growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-black text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight">Let’s bring your vision to life.</h2>
+                </div>
+                <div class="lg:col-span-7 bg-[#333333] border border-white/10 rounded-3xl p-8 shadow-xl">
+                    <form id="jam-contact-form" method="post" action="https://systeme.io/embedded/42203192/subscription" class="space-y-6" onsubmit="submitSystemeForm(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <input type="text" name="first_name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Name">
+                            <input type="text" name="company_name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Company">
+                        </div>
+                        <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Email">
+                        <textarea name="comment" rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Tell us about your activation..."></textarea>
+                        <button type="submit" class="w-full py-4 rounded-full bg-brand-pink/80 text-white font-bold hover:bg-white hover:text-brand-black transition-all">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-[#1A1A1A] text-brand-cream border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs text-zinc-500">&copy; 2026 JAM Experiential LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Custom Magnetic Cursor Logic
+        const cursor = document.getElementById('custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const hoverElements = document.querySelectorAll('a, button, .cursor-pointer, input, textarea');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+        });
+
+        // Frosted Glass Scroll Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        // Apply glass reveal to Hero elements directly
+        const heroElements = document.querySelectorAll('#hero h1, #hero p, #hero div.flex');
+        heroElements.forEach((el, index) => {
+            el.classList.add('reveal-glass');
+            el.style.transitionDelay = `${index * 150}ms`;
+            setTimeout(() => el.classList.add('is-visible'), 100); // Trigger instantly on load
+        });
+
+        // Apply glass reveal to structural layout components dynamically
+        const elementsToReveal = document.querySelectorAll('#philosophy .lg\\:col-span-5, #philosophy .bg-white, #capabilities .mb-16, #capabilities .bg-white, #contact .lg\\:col-span-5, #contact .bg-\\[\\#333333\\]');
+        elementsToReveal.forEach((el, index) => {
+            el.classList.add('reveal-glass');
+            el.style.transitionDelay = `${(index % 3) * 100}ms`; // Stagger the cascade effect
+            observer.observe(el);
+        });
+
+        // Form handling for Systeme.io without redirecting
+        async function submitSystemeForm(event) {
+            event.preventDefault(); // Stops the default page redirect
+            const form = event.target;
+            const btn = form.querySelector('button[type="submit"]');
+            
+            // Visual feedback while sending
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            try {
+                // Package the form data exactly how systeme.io expects it
+                const formData = new FormData(form);
+                const data = new URLSearchParams(formData);
+
+                // Send it in the background
+                await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    mode: 'no-cors' // Crucial: Bypasses strict cross-origin blocks for forms
+                });
+
+                // Display a beautiful success message inline
+                form.innerHTML = `
+                    <div class="text-center py-12 px-6 border border-brand-pink/30 rounded-2xl bg-brand-pink/5 reveal-glass is-visible">
+                        <div class="text-brand-pink text-4xl mb-4"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2 font-serif">Inquiry Submitted</h3>
+                        <p class="text-zinc-400 font-light text-sm">Thank you. We have received your vision and will be in touch shortly.</p>
+                    </div>
+                `;
+            } catch (error) {
+                // If it fails (e.g. no internet connection)
+                btn.textContent = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                alert("There was an issue sending your inquiry. Please check your connection and try again.");
+            }
+        }
+    </script>
+</body>
+</html>
